@@ -102,18 +102,18 @@ class plusViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             picker.dismiss(animated: true, completion: nil)
         }
         
-        // 写真を保存
-        @IBAction func savePicture(_ sender : AnyObject) {
-            let image:UIImage! = imageView.image
-            
-            if image != nil {
-                UIImageWriteToSavedPhotosAlbum(
-                    image,
-                    self,
-                    #selector(CameraViewController.image(_:didFinishSavingWithError:contextInfo:)),
-                    nil)
-            }
-        }
+        //写真を保存
+//        @IBAction func savePicture(_ sender : AnyObject) {
+//            let image:UIImage! = imageView.image
+//
+//            if image != nil {
+//                UIImageWriteToSavedPhotosAlbum(
+//                    image,
+//                    self,
+//                    #selector(CameraViewController.image(_:didFinishSavingWithError:contextInfo:)),
+//                    nil)
+//            }
+//        }
         
         // 書き込み完了結果の受け取り
         @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
